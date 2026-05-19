@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: MarketETL
+Version: 0.0.1
+Summary: A Stock Market Analysis App
+Home-page: https://github.com/Arpit1507/MarketETL
+Author: Arpit1507
+Author-email: agrawal.arpit03@nmims.edu.in
+Project-URL: Bug Tracker, https://github.com/Arpit1507/MarketETL/issues
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
