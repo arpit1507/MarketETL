@@ -1,0 +1,16 @@
+numpy
+pandas 
+tensorflow==2.14.0
+dvc
+mlflow==2.2.2
+pyYaml
+joblib
+tqdm
+ensure==1.0.2
+streamlit
+yfinance
+seaborn
+python-box==6.0.2
+scipy
+types-PyYAML
+-e .
