@@ -1,5 +1,16 @@
 artifacts_root: artifacts
 
-Data_Ingestion:
-  root_dir: artifacts/ingestion
+
+Data_ingestion:
+  root_dir: artifacts/data_ingestion
+  local_data_file: artifacts/data_ingestion/stock_data.csv
   
+
+Data_Transformation:
+  root_dir: artifacts/transformation
+  transformed_data_file: artifacts/transformation/processed_stock_data.csv
+
+Data_Loading:
+  root_dir: artifacts/loading
+  database_name: stock_market.db
+  table_name: stock_prices

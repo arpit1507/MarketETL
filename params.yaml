@@ -1,0 +1,39 @@
+data_ingestion:
+  tickers:
+    - AAPL
+    - MSFT
+    - TSLA
+    - NVDA
+    - GOOGL
+
+  start_date: "2023-01-01"
+  end_date: "2025-01-01"
+
+  interval: "1d"
+
+  auto_adjust: true
+
+data_transformation:
+  rolling_window_7: 7
+  rolling_window_30: 30
+
+  calculate_daily_return: true
+  calculate_volatility: true
+  calculate_rsi: true
+
+  missing_value_strategy: "drop"
+
+database:
+  table_name: "stock_prices"
+  if_exists: "append"
+
+dashboard:
+  default_ticker: "AAPL"
+  chart_height: 600
+
+logging:
+  log_level: "INFO"
+
+model_training:
+  test_size: 0.2
+  random_state: 42

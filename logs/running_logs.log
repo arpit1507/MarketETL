@@ -1,0 +1,79 @@
+[2026-05-19 12:28:48,007: INFO: main: Starting a new Project]
+[2026-05-19 22:15:48,100: INFO: main: Starting a new Project]
+[2026-05-19 22:16:19,643: INFO: main: Starting a new Project]
+[2026-05-19 22:17:02,241: INFO: main: Starting a new Project]
+[2026-05-19 22:18:06,297: INFO: main: Starting a new Project]
+[2026-05-19 22:19:39,116: INFO: main: Starting a new Project]
+[2026-05-19 22:21:00,867: INFO: main: Starting a new Project]
+[2026-05-19 22:21:00,868: INFO: common: yaml file: /Users/arpitagrawal/Desktop/Resume Projects/MarketETL/config/config.yaml loaded successfully]
+[2026-05-19 22:21:20,842: INFO: main: Starting a new Project]
+[2026-05-19 22:21:20,843: INFO: common: yaml file: /Users/arpitagrawal/Desktop/Resume Projects/MarketETL/config/config.yaml loaded successfully]
+[2026-05-20 21:32:42,870: INFO: DataExtractionPipeline: >>>>>> Stage Data Extraction started <<<<<<]
+[2026-05-20 21:32:42,871: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-20 21:32:42,873: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-20 21:32:42,873: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-20 21:32:42,874: INFO: common: created directory at: artifacts]
+[2026-05-20 21:32:42,874: ERROR: DataExtractionPipeline: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataExtractionPipeline.py", line 13, in main
+    config_manager.get_data_ingestion_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+[2026-05-20 21:32:42,874: ERROR: DataExtractionPipeline: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataExtractionPipeline.py", line 31, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataExtractionPipeline.py", line 22, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataExtractionPipeline.py", line 13, in main
+    config_manager.get_data_ingestion_config()
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+[2026-05-20 21:33:45,520: INFO: DataExtractionPipeline: >>>>>> Stage Data Extraction started <<<<<<]
+[2026-05-20 21:33:45,521: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-20 21:33:45,522: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-20 21:33:45,523: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-20 21:33:45,523: INFO: common: created directory at: artifacts]
+[2026-05-20 21:33:45,523: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-20 21:33:45,523: ERROR: DataExtractionPipeline: 'Logger' object is not callable]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataExtractionPipeline.py", line 18, in main
+    data_extraction.download_stock_data()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_extraction.py", line 16, in download_stock_data
+    logger(f"Downloading data for {ticker}")
+TypeError: 'Logger' object is not callable
+[2026-05-20 21:33:45,523: ERROR: DataExtractionPipeline: 'Logger' object is not callable]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataExtractionPipeline.py", line 31, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataExtractionPipeline.py", line 22, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataExtractionPipeline.py", line 18, in main
+    data_extraction.download_stock_data()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_extraction.py", line 16, in download_stock_data
+    logger(f"Downloading data for {ticker}")
+TypeError: 'Logger' object is not callable
+[2026-05-20 21:35:09,960: INFO: DataExtractionPipeline: >>>>>> Stage Data Extraction started <<<<<<]
+[2026-05-20 21:35:09,961: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-20 21:35:09,963: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-20 21:35:09,963: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-20 21:35:09,963: INFO: common: created directory at: artifacts]
+[2026-05-20 21:35:09,963: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-20 21:35:09,963: INFO: data_extraction: Downloading data for AAPL]
+[2026-05-20 21:35:10,736: INFO: data_extraction: Downloading data for MSFT]
+[2026-05-20 21:35:11,076: INFO: data_extraction: Downloading data for TSLA]
+[2026-05-20 21:35:11,455: INFO: data_extraction: Downloading data for NVDA]
+[2026-05-20 21:35:11,890: INFO: data_extraction: Downloading data for GOOGL]
+[2026-05-20 21:35:12,344: INFO: data_extraction: Data saved at: artifacts/data_ingestion/stock_data.csv]
+[2026-05-20 21:35:12,344: INFO: DataExtractionPipeline: >>>>>> Stage Data Extraction completed <<<<<<]
+[2026-05-20 21:39:41,092: INFO: DataExtractionPipeline: >>>>>> Stage Data Extraction started <<<<<<]
+[2026-05-20 21:39:41,094: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-20 21:39:41,095: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-20 21:39:41,096: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-20 21:39:41,096: INFO: common: created directory at: artifacts]
+[2026-05-20 21:39:41,096: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-20 21:39:41,096: INFO: data_extraction: Downloading data for AAPL]
+[2026-05-20 21:39:41,835: INFO: data_extraction: Downloading data for MSFT]
+[2026-05-20 21:39:42,148: INFO: data_extraction: Downloading data for TSLA]
+[2026-05-20 21:39:42,413: INFO: data_extraction: Downloading data for NVDA]
+[2026-05-20 21:39:42,720: INFO: data_extraction: Downloading data for GOOGL]
+[2026-05-20 21:39:43,016: INFO: data_extraction: Data saved at: artifacts/data_ingestion/stock_data.csv]
+[2026-05-20 21:39:43,016: INFO: DataExtractionPipeline: >>>>>> Stage Data Extraction completed <<<<<<]
