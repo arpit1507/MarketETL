@@ -1,0 +1,117 @@
+# MarketETL
+
+#### Aim 
+
+The aim of MarketETL is to design and implement a scalable ETL (Extract, Transform, Load) pipeline for stock market analytics using Python and modern data engineering practices.
+
+The project focuses on:
+
+- Extracting real-time and historical stock market data from APIs using yfinance
+- Cleaning and transforming raw financial datasets
+- Engineering analytical features such as:
+    - moving averages
+    - daily returns
+    - volatility
+    - RSI indicators
+- Storing processed data in structured databases
+- Automating data workflows through modular pipeline architecture
+- Preparing data for dashboards, analytics, and future machine learning applications
+
+The project simulates a real-world financial data engineering system and demonstrates practical skills in:
+
+- ETL development
+- data processing
+- automation
+- logging
+- configuration management
+- scalable project structuring
+- analytics pipeline design
+
+#### Project Structure
+
+```
+MarketETL/
+│ 
+├── config/
+│   ├── config.yaml
+│   └── schema.yaml
+│
+├── log/
+│   └── running_logs.log
+│
+├── src/
+│   └── MarketETL/
+│       │
+│       ├── components/
+│       │   ├── __init__.py
+│       │   └── data_extraction.py
+│       │
+│       ├── config/
+│       │   ├── __init__.py
+│       │   └── configuration.py
+│       │
+│       ├── constants/
+│       │   └── __init__.py
+│       │
+│       ├── entity/
+│       │   ├── __init__.py
+│       │   └── config_entity.py
+│       │
+│       ├── pipeline/
+│       │   ├── __init__.py
+│       │   └── DataExtractionPipeline.py
+│       │
+│       ├── utils/
+│       │   └──  __init__.py
+│       │
+│       └──  __init__.py
+│
+├── templates/
+│   └── index.html
+│
+├── .gitinore
+│
+├── paramas.yaml
+│
+├── Readme.md
+│
+├── requirements.txt
+│
+├── setup.py
+│
+├── main.py
+│
+└── template.py
+
+```
+#### Steps to start a new project
+
+use the following command to create a new conda environment for this project
+
+```bash
+conda create -n MarketETL python=3.9 -y 
+```
+
+```bash
+conda activate MarketETL
+```
+
+#### What all libraries do we require for this project
+
+we require the following libraries
+
+- numpy
+- pandas 
+- dvc
+- pyYaml
+- joblib
+- tqdm
+- ensure==1.0.2
+- streamlit
+- yfinance
+- seaborn
+- python-box==6.0.2
+- scipy
+- types-PyYAML
+
+

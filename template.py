@@ -21,7 +21,7 @@ list_of_files = [
     "requirements.txt",
     ".gitignore",
     "setup.py",
-    "template/index.html",
+    "templates/index.html",
     "README.md",
     "params.yaml"
 ]
