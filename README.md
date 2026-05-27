@@ -79,35 +79,41 @@ MarketETL/
 │
 ├── artifacts/
 │   ├── data_ingestion/
-│   ├── transformation/
-│   ├── model/
+│   └── transformation/
 │
 ├── src/
 │   └── MarketETL/
 │       │
 │       ├── components/
+│       │   ├── __init__.py
 │       │   ├── data_extraction.py
 │       │   ├── data_transformation.py
 │       │   └── data_loading.py
 │       │
 │       ├── config/
+│       │   ├── __init__.py
 │       │   └── configuration.py
 │       │
 │       ├── constants/
+│       │   └── __init__.py
 │       │
 │       ├── entity/
 │       │   └── config_entity.py
 │       │
 │       ├── pipeline/
+│       │   ├── __init__.py
 │       │   ├── DataExtractionPipeline.py
 │       │   ├── DataTransformationPipeline.py
 │       │   └── DataLoadingPipeline.py
 │       │
 │       ├── utils/
+│       │   ├── __init__.py
+│       │   └── common.py
 │       │
 │       └── __init__.py
 │
 ├── templates/
+│   └── index.html
 │
 ├── params.yaml
 ├── requirements.txt
