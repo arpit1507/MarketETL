@@ -77,3 +77,1967 @@ TypeError: 'Logger' object is not callable
 [2026-05-20 21:39:42,720: INFO: data_extraction: Downloading data for GOOGL]
 [2026-05-20 21:39:43,016: INFO: data_extraction: Data saved at: artifacts/data_ingestion/stock_data.csv]
 [2026-05-20 21:39:43,016: INFO: DataExtractionPipeline: >>>>>> Stage Data Extraction completed <<<<<<]
+[2026-05-21 14:44:56,959: INFO: DataTransformationPipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2026-05-21 14:44:56,961: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-21 14:44:56,962: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-21 14:44:56,963: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-21 14:44:56,963: INFO: common: created directory at: artifacts]
+[2026-05-21 14:44:56,963: INFO: common: created directory at: artifacts/transformation]
+[2026-05-21 14:44:56,963: ERROR: DataTransformationPipeline: "'ConfigBox' object has no attribute 'data_extraction'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'Data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'Data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'Data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'Data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 22, in main
+    config.get_data_transformation_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/config/configuration.py", line 34, in get_data_transformation_config
+    raw_data_file= config.Data_extraction.local_data_file,
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_extraction'"
+[2026-05-21 14:44:56,964: ERROR: DataTransformationPipeline: "'ConfigBox' object has no attribute 'data_extraction'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'Data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'Data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'Data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'Data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 50, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 35, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 22, in main
+    config.get_data_transformation_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/config/configuration.py", line 34, in get_data_transformation_config
+    raw_data_file= config.Data_extraction.local_data_file,
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_extraction'"
+[2026-05-21 14:45:42,655: INFO: DataTransformationPipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2026-05-21 14:45:42,656: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-21 14:45:42,658: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-21 14:45:42,659: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-21 14:45:42,659: INFO: common: created directory at: artifacts]
+[2026-05-21 14:45:42,659: INFO: common: created directory at: artifacts/transformation]
+[2026-05-21 14:45:42,659: ERROR: DataTransformationPipeline: "'ConfigBox' object has no attribute 'data_extraction'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'Data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'Data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'Data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'Data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 22, in main
+    config.get_data_transformation_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/config/configuration.py", line 34, in get_data_transformation_config
+    raw_data_file= config.Data_extraction.local_data_file,
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_extraction'"
+[2026-05-21 14:45:42,660: ERROR: DataTransformationPipeline: "'ConfigBox' object has no attribute 'data_extraction'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'Data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'Data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'Data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'Data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_extraction'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'data_extraction'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 50, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 35, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 22, in main
+    config.get_data_transformation_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/config/configuration.py", line 34, in get_data_transformation_config
+    raw_data_file= config.Data_extraction.local_data_file,
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_extraction'"
+[2026-05-21 14:45:57,964: INFO: DataTransformationPipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2026-05-21 14:45:57,965: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-21 14:45:57,967: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-21 14:45:57,967: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-21 14:45:57,967: INFO: common: created directory at: artifacts]
+[2026-05-21 14:45:57,967: INFO: common: created directory at: artifacts/transformation]
+[2026-05-21 14:45:57,967: INFO: data_transformation: Reading raw stock data]
+[2026-05-21 14:45:57,967: ERROR: data_transformation: 'DataTransfromationConfig' object has no attribute 'raw_data_path']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 20, in transform_stock_data
+    df = pd.read_csv(self.config.raw_data_path)
+AttributeError: 'DataTransfromationConfig' object has no attribute 'raw_data_path'
+[2026-05-21 14:45:57,968: ERROR: DataTransformationPipeline: 'DataTransfromationConfig' object has no attribute 'raw_data_path']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 31, in main
+    data_transformation.transform_stock_data()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 163, in transform_stock_data
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 20, in transform_stock_data
+    df = pd.read_csv(self.config.raw_data_path)
+AttributeError: 'DataTransfromationConfig' object has no attribute 'raw_data_path'
+[2026-05-21 14:45:57,968: ERROR: DataTransformationPipeline: 'DataTransfromationConfig' object has no attribute 'raw_data_path']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 50, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 35, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 31, in main
+    data_transformation.transform_stock_data()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 163, in transform_stock_data
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 20, in transform_stock_data
+    df = pd.read_csv(self.config.raw_data_path)
+AttributeError: 'DataTransfromationConfig' object has no attribute 'raw_data_path'
+[2026-05-21 14:46:28,077: INFO: DataTransformationPipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2026-05-21 14:46:28,079: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-21 14:46:28,080: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-21 14:46:28,081: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-21 14:46:28,081: INFO: common: created directory at: artifacts]
+[2026-05-21 14:46:28,081: INFO: common: created directory at: artifacts/transformation]
+[2026-05-21 14:46:28,081: INFO: data_transformation: Reading raw stock data]
+[2026-05-21 14:46:28,086: INFO: data_transformation: Raw dataframe shape: (2510, 7)]
+[2026-05-21 14:46:28,086: INFO: data_transformation: Handling missing values]
+[2026-05-21 14:46:28,086: INFO: data_transformation: Converting Date column]
+[2026-05-21 14:46:28,090: INFO: data_transformation: Sorting values]
+[2026-05-21 14:46:28,094: INFO: data_transformation: Calculating daily returns]
+[2026-05-21 14:46:28,097: INFO: data_transformation: Calculating moving averages]
+[2026-05-21 14:46:28,100: INFO: data_transformation: Calculating volatility]
+[2026-05-21 14:46:28,102: INFO: data_transformation: Calculating RSI]
+[2026-05-21 14:46:28,104: INFO: data_transformation: Final cleaning]
+[2026-05-21 14:46:28,104: INFO: data_transformation: Saving transformed data]
+[2026-05-21 14:46:28,120: INFO: data_transformation: Processed data saved at: artifacts/transformation/processed_stock_data.csv]
+[2026-05-21 14:46:28,120: INFO: data_transformation: Final dataframe shape: (2365, 12)]
+[2026-05-21 14:46:28,120: INFO: DataTransformationPipeline: >>>>>> Data Transformation Stage completed <<<<<<]
+[2026-05-26 21:18:19,718: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 21:18:19,721: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 21:18:19,722: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 21:18:19,723: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 21:18:19,723: INFO: common: created directory at: artifacts]
+[2026-05-26 21:18:19,723: ERROR: DataLoadingPipeline: __init__() got an unexpected keyword argument 'columns']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 24, in main
+    config.get_data_loading_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/config/configuration.py", line 49, in get_data_loading_config
+    return DataLoadingConfig(
+TypeError: __init__() got an unexpected keyword argument 'columns'
+[2026-05-26 21:23:17,324: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 21:23:17,327: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 21:23:17,328: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 21:23:17,329: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 21:23:17,329: INFO: common: created directory at: artifacts]
+[2026-05-26 21:23:17,329: ERROR: DataLoadingPipeline: __init__() got an unexpected keyword argument 'columns']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 24, in main
+    config.get_data_loading_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/config/configuration.py", line 49, in get_data_loading_config
+    return DataLoadingConfig(
+TypeError: __init__() got an unexpected keyword argument 'columns'
+[2026-05-26 21:24:18,441: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 21:24:18,443: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 21:24:18,444: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 21:24:18,445: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 21:24:18,445: INFO: common: created directory at: artifacts]
+[2026-05-26 21:24:18,445: ERROR: DataLoadingPipeline: __init__() got an unexpected keyword argument 'columns']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 24, in main
+    config.get_data_loading_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/config/configuration.py", line 49, in get_data_loading_config
+    return DataLoadingConfig(
+TypeError: __init__() got an unexpected keyword argument 'columns'
+[2026-05-26 21:25:48,927: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 21:25:48,929: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 21:25:48,930: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 21:25:48,931: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 21:25:48,931: INFO: common: created directory at: artifacts]
+[2026-05-26 21:25:48,931: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 21:25:48,942: INFO: data_loading: Rows to load: 2365]
+[2026-05-26 21:25:48,942: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 21:25:51,395: ERROR: data_loading: (psycopg2.OperationalError) could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 21:25:51,403: ERROR: DataLoadingPipeline: (psycopg2.OperationalError) could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 95, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 21:29:26,472: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 21:29:26,474: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 21:29:26,475: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 21:29:26,476: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 21:29:26,476: INFO: common: created directory at: artifacts]
+[2026-05-26 21:29:26,476: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 21:29:26,483: INFO: data_loading: Rows to load: 2365]
+[2026-05-26 21:29:26,483: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 21:29:26,568: ERROR: data_loading: (psycopg2.OperationalError) could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 21:29:26,576: ERROR: DataLoadingPipeline: (psycopg2.OperationalError) could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 95, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "150701@database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" to address: nodename nor servname provided, or not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 21:30:27,101: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 21:30:27,103: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 21:30:27,104: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 21:30:27,105: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 21:30:27,105: INFO: common: created directory at: artifacts]
+[2026-05-26 21:30:27,105: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 21:30:27,114: INFO: data_loading: Rows to load: 2365]
+[2026-05-26 21:30:27,114: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 21:31:42,346: ERROR: data_loading: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 21:31:42,364: ERROR: DataLoadingPipeline: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 95, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 22:35:57,285: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 22:36:00,360: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 22:36:01,787: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 22:36:03,029: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 22:36:03,030: INFO: common: created directory at: artifacts]
+[2026-05-26 22:36:03,030: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 22:36:03,068: INFO: data_loading: Rows to load: 2365]
+[2026-05-26 22:36:03,068: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 22:37:18,529: ERROR: data_loading: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 22:37:21,123: ERROR: DataLoadingPipeline: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 95, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 22:42:13,288: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 22:42:13,290: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 22:42:13,292: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 22:42:13,294: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 22:42:13,294: INFO: common: created directory at: artifacts]
+[2026-05-26 22:42:13,294: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 22:42:13,306: INFO: data_loading: Rows to load: 2365]
+[2026-05-26 22:42:13,306: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 22:42:13,649: ERROR: data_loading: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 22:42:13,659: ERROR: DataLoadingPipeline: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 95, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 22:43:51,108: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 22:43:51,110: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 22:43:51,112: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 22:43:51,113: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 22:43:51,113: INFO: common: created directory at: artifacts]
+[2026-05-26 22:43:51,113: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 22:43:51,124: INFO: data_loading: Rows to load: 2365]
+[2026-05-26 22:43:51,124: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 22:43:51,469: ERROR: data_loading: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 22:43:51,479: ERROR: DataLoadingPipeline: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 95, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 22:45:27,967: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 22:45:27,969: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 22:45:27,972: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 22:45:27,973: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 22:45:27,973: INFO: common: created directory at: artifacts]
+[2026-05-26 22:45:27,973: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 22:45:27,984: INFO: data_loading: Rows to load: 2365]
+[2026-05-26 22:45:27,984: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 22:45:28,296: ERROR: data_loading: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 22:45:28,306: ERROR: DataLoadingPipeline: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 95, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 80, in load_to_rds
+    df.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 843, in to_sql
+    with pandasSQL_builder(con, schema=schema, need_transaction=True) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: root certificate file "global-bundle.pem" does not exist
+Either provide the file, use the system's trusted roots with sslrootcert=system, or change sslmode to disable server certificate verification.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-26 22:48:02,737: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 22:48:02,740: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 22:48:02,742: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 22:48:02,744: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 22:48:02,744: INFO: common: created directory at: artifacts]
+[2026-05-26 22:48:02,744: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 22:48:02,754: INFO: data_loading: Rows to load: 2365]
+[2026-05-26 22:48:02,754: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 22:48:07,886: INFO: data_loading: Data loaded to PostgreSQL]
+[2026-05-26 22:48:07,886: INFO: DataLoadingPipeline: Data Loading Stage completed]
+[2026-05-26 23:31:55,060: INFO: DataExtractionPipeline: >>>>>> Stage Data Extraction started <<<<<<]
+[2026-05-26 23:31:58,085: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 23:31:58,088: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 23:31:59,636: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 23:31:59,637: INFO: common: created directory at: artifacts]
+[2026-05-26 23:31:59,637: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-26 23:32:01,854: INFO: data_extraction: Data saved at: artifacts/data_ingestion/stock_data.csv]
+[2026-05-26 23:32:01,854: INFO: DataExtractionPipeline: >>>>>> Stage Data Extraction completed <<<<<<]
+[2026-05-26 23:34:42,185: INFO: DataTransformationPipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2026-05-26 23:34:42,187: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 23:34:42,189: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 23:34:42,191: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 23:34:42,191: INFO: common: created directory at: artifacts]
+[2026-05-26 23:34:42,191: INFO: common: created directory at: artifacts/transformation]
+[2026-05-26 23:34:42,191: INFO: data_transformation: Reading raw stock data]
+[2026-05-26 23:34:42,191: ERROR: data_transformation: 'DataTransfromationConfig' object has no attribute 'raw_data_path']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 20, in transform_stock_data
+    df = pd.read_csv(self.config.raw_data_path)
+AttributeError: 'DataTransfromationConfig' object has no attribute 'raw_data_path'
+[2026-05-26 23:34:42,191: ERROR: DataTransformationPipeline: 'DataTransfromationConfig' object has no attribute 'raw_data_path']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 31, in main
+    data_transformation.transform_stock_data()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 154, in transform_stock_data
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 20, in transform_stock_data
+    df = pd.read_csv(self.config.raw_data_path)
+AttributeError: 'DataTransfromationConfig' object has no attribute 'raw_data_path'
+[2026-05-26 23:34:42,191: ERROR: DataTransformationPipeline: 'DataTransfromationConfig' object has no attribute 'raw_data_path']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 50, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 35, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 31, in main
+    data_transformation.transform_stock_data()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 154, in transform_stock_data
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 20, in transform_stock_data
+    df = pd.read_csv(self.config.raw_data_path)
+AttributeError: 'DataTransfromationConfig' object has no attribute 'raw_data_path'
+[2026-05-26 23:35:14,418: INFO: DataTransformationPipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2026-05-26 23:35:14,420: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 23:35:14,422: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 23:35:14,423: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 23:35:14,423: INFO: common: created directory at: artifacts]
+[2026-05-26 23:35:14,423: INFO: common: created directory at: artifacts/transformation]
+[2026-05-26 23:35:14,423: INFO: data_transformation: Reading raw stock data]
+[2026-05-26 23:35:14,423: ERROR: data_transformation: 'DataTransfromationConfig' object has no attribute 'local_data_file']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 20, in transform_stock_data
+    df = pd.read_csv(self.config.local_data_file)
+AttributeError: 'DataTransfromationConfig' object has no attribute 'local_data_file'
+[2026-05-26 23:35:14,423: ERROR: DataTransformationPipeline: 'DataTransfromationConfig' object has no attribute 'local_data_file']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 31, in main
+    data_transformation.transform_stock_data()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 154, in transform_stock_data
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 20, in transform_stock_data
+    df = pd.read_csv(self.config.local_data_file)
+AttributeError: 'DataTransfromationConfig' object has no attribute 'local_data_file'
+[2026-05-26 23:35:14,424: ERROR: DataTransformationPipeline: 'DataTransfromationConfig' object has no attribute 'local_data_file']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 50, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 35, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataTransformationPipeline.py", line 31, in main
+    data_transformation.transform_stock_data()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 154, in transform_stock_data
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_transformation.py", line 20, in transform_stock_data
+    df = pd.read_csv(self.config.local_data_file)
+AttributeError: 'DataTransfromationConfig' object has no attribute 'local_data_file'
+[2026-05-26 23:35:40,169: INFO: DataTransformationPipeline: >>>>>> Data Transformation Stage started <<<<<<]
+[2026-05-26 23:35:40,173: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 23:35:40,175: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 23:35:40,177: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 23:35:40,177: INFO: common: created directory at: artifacts]
+[2026-05-26 23:35:40,177: INFO: common: created directory at: artifacts/transformation]
+[2026-05-26 23:35:40,177: INFO: data_transformation: Reading raw stock data]
+[2026-05-26 23:35:40,186: INFO: data_transformation: Raw dataframe shape: (4250, 7)]
+[2026-05-26 23:35:40,186: INFO: data_transformation: Converting Date column]
+[2026-05-26 23:35:40,191: INFO: data_transformation: Sorting values]
+[2026-05-26 23:35:40,197: INFO: data_transformation: Calculating daily returns]
+[2026-05-26 23:35:40,201: INFO: data_transformation: Calculating moving averages]
+[2026-05-26 23:35:40,206: INFO: data_transformation: Calculating volatility]
+[2026-05-26 23:35:40,207: INFO: data_transformation: Calculating RSI]
+[2026-05-26 23:35:40,211: INFO: data_transformation: Final cleaning]
+[2026-05-26 23:35:40,212: INFO: data_transformation: Saving transformed data]
+[2026-05-26 23:35:40,257: INFO: data_transformation: Processed data saved at: artifacts/transformation/processed_stock_data.csv]
+[2026-05-26 23:35:40,257: INFO: data_transformation: Final dataframe shape: (4105, 12)]
+[2026-05-26 23:35:40,257: INFO: DataTransformationPipeline: >>>>>> Data Transformation Stage completed <<<<<<]
+[2026-05-26 23:36:03,467: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 23:36:03,469: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 23:36:03,471: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 23:36:03,472: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 23:36:03,472: INFO: common: created directory at: artifacts]
+[2026-05-26 23:36:03,472: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 23:36:03,486: INFO: data_loading: Rows to load: 4105]
+[2026-05-26 23:36:03,486: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 23:36:13,078: INFO: data_loading: Data loaded to PostgreSQL]
+[2026-05-26 23:36:13,081: INFO: DataLoadingPipeline: Data Loading Stage completed]
+[2026-05-26 23:41:30,636: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-26 23:41:30,639: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-26 23:41:30,641: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-26 23:41:30,642: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-26 23:41:30,642: INFO: common: created directory at: artifacts]
+[2026-05-26 23:41:30,642: INFO: data_loading: Reading transformed CSV]
+[2026-05-26 23:41:30,658: INFO: data_loading: Rows in CSV: 4105]
+[2026-05-26 23:41:30,658: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-26 23:41:32,061: INFO: data_loading: New rows to insert: 0]
+[2026-05-26 23:41:32,061: INFO: data_loading: No new rows found]
+[2026-05-26 23:41:32,061: INFO: DataLoadingPipeline: Data Loading Stage completed]

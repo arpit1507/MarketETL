@@ -1,7 +1,14 @@
 COLUMNS:
   Date: object
-  Open: float64
+  Close: float64
   High: float64
   Low: float64
-  Close: float64
+  Open: float64
   Volume: int64
+  Ticker: object
+
+  Daily_Return: float64
+  MA_7: float64
+  MA_30: float64
+  Volatility: float64
+  RSI: float64

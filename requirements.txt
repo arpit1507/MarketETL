@@ -13,4 +13,5 @@ seaborn
 python-box==6.0.2
 scipy
 types-PyYAML
+psycopg2-binary
 -e .

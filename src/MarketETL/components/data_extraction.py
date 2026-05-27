@@ -2,7 +2,7 @@ from MarketETL.config.configuration import DataExtractionConfig
 from MarketETL import logger
 import yfinance as yf
 import pandas as pd
-
+from datetime import date
 class DataExtraction:
 
     def __init__(self, config: DataExtractionConfig):
@@ -11,14 +11,18 @@ class DataExtraction:
     def download_stock_data(self):
         all_data = []
 
-        for ticker in self.config.tickers:
+        end_date = (
+            self.config.end_date
+            if self.config.end_date
+                else date.today().strftime("%Y-%m-%d")
+        )
 
-            logger.info(f"Downloading data for {ticker}")
+        for ticker in self.config.tickers:
 
             df = yf.download(
                 ticker,
                 start=self.config.start_date,
-                end=self.config.end_date,
+                end=end_date,
                 interval=self.config.interval,
                 auto_adjust=self.config.auto_adjust
             )
