@@ -18,6 +18,7 @@ list_of_files = [
     f"src/{project_name}/pipeline/__init__.py",
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/constants/__init__.py",
+    ".github/workflows/marketetl.yml",
     "requirements.txt",
     ".gitignore",
     "setup.py",

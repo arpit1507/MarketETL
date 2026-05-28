@@ -1,6 +1,6 @@
 from MarketETL.constants import config_file_path,params_file_path,schema_file_path
 from MarketETL.utils.common import read_yaml,create_directories
-from MarketETL.entity.config_entity import (DataExtractionConfig,DataTransfromationConfig,DataLoadingConfig)
+from MarketETL.entity.config_entity import (DataExtractionConfig,DataTransfromationConfig,DataLoadingConfig,ModelTrainingConfig,PredictionConfig)
 
 class ConfigurationManager:
     def __init__(self, config_file_path=config_file_path, params_file_path=params_file_path):
@@ -42,8 +42,6 @@ class ConfigurationManager:
         )
 
     def get_data_loading_config(self) -> DataLoadingConfig:
-
-        config = self.config.Data_Loading
         params = self.params.database
         schema = self.schema.COLUMNS
 
@@ -55,15 +53,43 @@ class ConfigurationManager:
                 .transformed_data_file
             ),
 
-            DB_HOST=config.DB_HOST,
-            DB_PORT=config.DB_PORT,
-            DB_NAME=config.DB_NAME,
-            DB_USER=config.DB_USER,
-            DB_PASSWORD=config.DB_PASSWORD,
-            SSL_ROOT_CERT=config.SSL_ROOT_CERT,
-
             table_name=params.table_name,
             if_exists=params.if_exists,
 
             columns=schema
+        )
+    
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config.Model_Training
+        params = self.params.model_training
+
+        create_directories([config.root_dir,config.trained_model_dir,config.scaler_dir])
+
+        return ModelTrainingConfig(
+            root_dir=config.root_dir,
+            trained_model_dir=config.trained_model_dir,
+            scaler_dir=config.scaler_dir,
+            transformed_data_file=config.transformed_data_file,
+            sequence_length=params.sequence_length,
+            epochs=params.epochs,
+            batch_size= params.batch_size,
+            validation_split= params.validation_split,
+            target_column= params.target_column,
+            forecast_days=params.forecast_days
+        )
+    
+    def get_prediction_config(self) -> PredictionConfig:
+        config = self.config.Prediction
+        training = self.config.Model_Training
+        params = self.params.model_training
+        create_directories([config.root_dir])
+
+        return PredictionConfig(
+            root_dir=config.root_dir,
+            forecast_file=config.forecast_file,
+            transformed_data_file=training.transformed_data_file,
+            trained_model_dir=training.trained_model_dir,
+            scaler_dir=training.scaler_dir,
+            sequence_length=params.sequence_length,
+            forecast_days=params.forecast_days
         )

@@ -10,10 +10,13 @@ Data_Transformation:
   root_dir: artifacts/transformation
   transformed_data_file: artifacts/transformation/processed_stock_data.csv
 
-Data_Loading:
-  DB_HOST: database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com
-  DB_PORT: 5432
-  DB_NAME: MarketETL
-  DB_USER: postgres
-  DB_PASSWORD: ProjectPassword
-  SSL_ROOT_CERT: global-bundle.pem
+
+Model_Training:
+  root_dir: artifacts/model_training
+  trained_model_dir: artifacts/model_training/models
+  scaler_dir: artifacts/model_training/scalers
+  transformed_data_file: artifacts/transformation/processed_stock_data.csv
+
+Prediction:
+  root_dir: artifacts/predictions
+  forecast_file: artifacts/predictions/forecast.csv

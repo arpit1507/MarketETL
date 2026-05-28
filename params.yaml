@@ -5,6 +5,7 @@ data_extraction:
     - TSLA
     - NVDA
     - GOOGL
+    - SH
 
   start_date: "2023-01-01"
 
@@ -35,6 +36,11 @@ dashboard:
 logging:
   log_level: "INFO"
 
+
 model_training:
-  test_size: 0.2
-  random_state: 42
+  sequence_length: 30
+  epochs: 50
+  batch_size: 32
+  validation_split: 0.2
+  forecast_days: 7
+  target_column: "Close"

@@ -3,12 +3,11 @@ import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy import text
 from urllib.parse import quote_plus
-
+import os
 from MarketETL import logger
 from MarketETL.entity.config_entity import (
     DataLoadingConfig
 )
-
 
 class DataLoading:
 
@@ -55,23 +54,17 @@ class DataLoading:
             # DB connection
             # -------------------
 
-            host = self.config.DB_HOST
-            port = self.config.DB_PORT
-            db = self.config.DB_NAME
-            user = self.config.DB_USER
-
-            password = quote_plus(
-                self.config.DB_PASSWORD
-            )
-
-            cert = self.config.SSL_ROOT_CERT
 
             connection_string = (
                 f"postgresql+psycopg2://"
-                f"{user}:{password}"
-                f"@{host}:{port}/{db}"
+                f"{os.getenv('DB_USER')}:"
+                f"{os.getenv('DB_PASSWORD')}"
+                f"@{os.getenv('DB_HOST')}:"
+                f"{os.getenv('DB_PORT')}/"
+                f"{os.getenv('DB_NAME')}"
                 f"?sslmode=verify-full"
-                f"&sslrootcert={cert}"
+                f"&sslrootcert="
+                f"{os.getenv('SSL_ROOT_CERT')}"
             )
 
             logger.info(
@@ -98,12 +91,14 @@ class DataLoading:
 
             # normalize date format
             df["Date"] = pd.to_datetime(
-                df["Date"]
-            )
+                df["Date"],
+                format="mixed"
+            ).dt.date
 
             existing_df["Date"] = pd.to_datetime(
-                existing_df["Date"]
-            )
+                existing_df["Date"],
+                format="mixed"
+            ).dt.date
 
             # -------------------
             # remove duplicates

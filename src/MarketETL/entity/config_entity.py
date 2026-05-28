@@ -31,14 +31,31 @@ class DataLoadingConfig:
 
     transformed_data_file: Path
 
-    DB_HOST: str
-    DB_PORT: int
-    DB_NAME: str
-    DB_USER: str
-    DB_PASSWORD: str
-    SSL_ROOT_CERT: str
-
     table_name: str
     if_exists: str
 
     columns: dict
+
+
+@dataclass(frozen=True)
+class ModelTrainingConfig:
+    root_dir: Path
+    trained_model_dir: Path
+    scaler_dir: Path
+    transformed_data_file: Path
+    sequence_length: int
+    epochs: int
+    batch_size: int
+    validation_split: float
+    target_column: str
+    forecast_days: int
+
+@dataclass(frozen=True)
+class PredictionConfig:
+    root_dir: Path
+    forecast_file: Path
+    transformed_data_file: Path
+    trained_model_dir: Path
+    scaler_dir: Path
+    sequence_length: int
+    forecast_days: int

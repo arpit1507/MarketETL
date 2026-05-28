@@ -2041,3 +2041,892 @@ AttributeError: 'DataTransfromationConfig' object has no attribute 'local_data_f
 [2026-05-26 23:41:32,061: INFO: data_loading: New rows to insert: 0]
 [2026-05-26 23:41:32,061: INFO: data_loading: No new rows found]
 [2026-05-26 23:41:32,061: INFO: DataLoadingPipeline: Data Loading Stage completed]
+[2026-05-27 23:41:08,299: INFO: ModelTrainingPipeline: Model Training started]
+[2026-05-27 23:41:08,301: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-27 23:41:08,303: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-27 23:41:08,304: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-27 23:41:08,304: INFO: common: created directory at: artifacts]
+[2026-05-27 23:41:08,304: INFO: common: created directory at: artifacts/model_training]
+[2026-05-27 23:41:08,304: INFO: common: created directory at: artifacts/model_training/models]
+[2026-05-27 23:41:08,304: INFO: common: created directory at: artifacts/model_training/scalers]
+[2026-05-27 23:41:08,323: INFO: Model_training: Training AAPL]
+[2026-05-27 23:41:19,346: INFO: Model_training: AAPL trained]
+[2026-05-27 23:41:19,347: INFO: Model_training: Training GOOGL]
+[2026-05-27 23:41:30,442: INFO: Model_training: GOOGL trained]
+[2026-05-27 23:41:30,442: INFO: Model_training: Training MSFT]
+[2026-05-27 23:41:41,512: INFO: Model_training: MSFT trained]
+[2026-05-27 23:41:41,512: INFO: Model_training: Training NVDA]
+[2026-05-27 23:41:52,337: INFO: Model_training: NVDA trained]
+[2026-05-27 23:41:52,337: INFO: Model_training: Training TSLA]
+[2026-05-27 23:42:03,486: INFO: Model_training: TSLA trained]
+[2026-05-27 23:42:03,487: INFO: ModelTrainingPipeline: Model Training completed]
+[2026-05-27 23:45:23,778: INFO: PredictionPipeline: Prediction Stage started]
+[2026-05-27 23:45:23,780: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-27 23:45:23,782: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-27 23:45:23,782: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-27 23:45:23,783: INFO: common: created directory at: artifacts]
+[2026-05-27 23:45:23,783: INFO: common: created directory at: artifacts/model_training]
+[2026-05-27 23:45:23,783: INFO: common: created directory at: artifacts/model_training/models]
+[2026-05-27 23:45:23,783: INFO: common: created directory at: artifacts/model_training/scalers]
+[2026-05-27 23:45:23,973: ERROR: PredictionPipeline: 'Adam' object has no attribute 'build']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/PredictionPipeline.py", line 37, in main
+    predictor.forecast()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/Prediction.py", line 32, in forecast
+    model = load_model(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/saving/saving_api.py", line 254, in load_model
+    return saving_lib.load_model(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/saving/saving_lib.py", line 281, in load_model
+    raise e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/saving/saving_lib.py", line 246, in load_model
+    model = deserialize_keras_object(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/saving/serialization_lib.py", line 734, in deserialize_keras_object
+    instance.compile_from_config(compile_config)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/engine/training.py", line 3661, in compile_from_config
+    self.optimizer.build(self.trainable_variables)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/optimizers/legacy/optimizer_v2.py", line 997, in __getattribute__
+    raise e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/optimizers/legacy/optimizer_v2.py", line 987, in __getattribute__
+    return super().__getattribute__(name)
+AttributeError: 'Adam' object has no attribute 'build'
+[2026-05-27 23:45:23,977: ERROR: PredictionPipeline: 'Adam' object has no attribute 'build']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/PredictionPipeline.py", line 56, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/PredictionPipeline.py", line 43, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/PredictionPipeline.py", line 37, in main
+    predictor.forecast()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/Prediction.py", line 32, in forecast
+    model = load_model(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/saving/saving_api.py", line 254, in load_model
+    return saving_lib.load_model(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/saving/saving_lib.py", line 281, in load_model
+    raise e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/saving/saving_lib.py", line 246, in load_model
+    model = deserialize_keras_object(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/saving/serialization_lib.py", line 734, in deserialize_keras_object
+    instance.compile_from_config(compile_config)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/engine/training.py", line 3661, in compile_from_config
+    self.optimizer.build(self.trainable_variables)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/optimizers/legacy/optimizer_v2.py", line 997, in __getattribute__
+    raise e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/keras/src/optimizers/legacy/optimizer_v2.py", line 987, in __getattribute__
+    return super().__getattribute__(name)
+AttributeError: 'Adam' object has no attribute 'build'
+[2026-05-27 23:46:29,269: INFO: PredictionPipeline: Prediction Stage started]
+[2026-05-27 23:46:29,271: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-27 23:46:29,272: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-27 23:46:29,273: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-27 23:46:29,273: INFO: common: created directory at: artifacts]
+[2026-05-27 23:46:29,273: INFO: common: created directory at: artifacts/model_training]
+[2026-05-27 23:46:29,273: INFO: common: created directory at: artifacts/model_training/models]
+[2026-05-27 23:46:29,273: INFO: common: created directory at: artifacts/model_training/scalers]
+[2026-05-27 23:46:32,298: ERROR: PredictionPipeline: 'ModelTrainingConfig' object has no attribute 'forecast_file']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/PredictionPipeline.py", line 37, in main
+    predictor.forecast()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/Prediction.py", line 119, in forecast
+    self.config.forecast_file,
+AttributeError: 'ModelTrainingConfig' object has no attribute 'forecast_file'
+[2026-05-27 23:46:32,299: ERROR: PredictionPipeline: 'ModelTrainingConfig' object has no attribute 'forecast_file']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/PredictionPipeline.py", line 56, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/PredictionPipeline.py", line 43, in main
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/PredictionPipeline.py", line 37, in main
+    predictor.forecast()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/Prediction.py", line 119, in forecast
+    self.config.forecast_file,
+AttributeError: 'ModelTrainingConfig' object has no attribute 'forecast_file'
+[2026-05-27 23:52:49,254: INFO: PredictionPipeline: Prediction Stage started]
+[2026-05-27 23:52:49,256: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-27 23:52:49,258: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-27 23:52:49,259: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-27 23:52:49,259: INFO: common: created directory at: artifacts]
+[2026-05-27 23:52:49,259: INFO: common: created directory at: artifacts/predictions]
+[2026-05-27 23:52:52,291: INFO: Prediction: Forecast saved]
+[2026-05-27 23:52:52,291: INFO: PredictionPipeline: Prediction Stage completed]
+[2026-05-27 23:55:08,239: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-27 23:55:08,242: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-27 23:55:08,243: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-27 23:55:08,243: INFO: common: created directory at: artifacts]
+[2026-05-27 23:55:08,243: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-27 23:55:10,421: INFO: data_extraction: Data saved at: artifacts/data_ingestion/stock_data.csv]
+[2026-05-27 23:55:10,422: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-27 23:55:10,424: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-27 23:55:10,425: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-27 23:55:10,425: INFO: common: created directory at: artifacts]
+[2026-05-27 23:55:10,425: INFO: common: created directory at: artifacts/transformation]
+[2026-05-27 23:55:10,425: INFO: data_transformation: Reading raw stock data]
+[2026-05-27 23:55:10,430: INFO: data_transformation: Raw dataframe shape: (4255, 7)]
+[2026-05-27 23:55:10,430: INFO: data_transformation: Converting Date column]
+[2026-05-27 23:55:10,433: INFO: data_transformation: Sorting values]
+[2026-05-27 23:55:10,434: INFO: data_transformation: Calculating daily returns]
+[2026-05-27 23:55:10,436: INFO: data_transformation: Calculating moving averages]
+[2026-05-27 23:55:10,439: INFO: data_transformation: Calculating volatility]
+[2026-05-27 23:55:10,440: INFO: data_transformation: Calculating RSI]
+[2026-05-27 23:55:10,443: INFO: data_transformation: Final cleaning]
+[2026-05-27 23:55:10,443: INFO: data_transformation: Saving transformed data]
+[2026-05-27 23:55:10,469: INFO: data_transformation: Processed data saved at: artifacts/transformation/processed_stock_data.csv]
+[2026-05-27 23:55:10,469: INFO: data_transformation: Final dataframe shape: (4110, 12)]
+[2026-05-27 23:55:10,471: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-27 23:55:10,472: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-27 23:55:10,473: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-27 23:55:10,473: INFO: common: created directory at: artifacts]
+[2026-05-27 23:55:10,473: INFO: data_loading: Reading transformed CSV]
+[2026-05-27 23:55:10,478: INFO: data_loading: Rows in CSV: 4110]
+[2026-05-27 23:55:10,478: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-27 23:55:12,222: INFO: data_loading: New rows to insert: 5]
+[2026-05-27 23:55:12,428: INFO: data_loading: Only new rows inserted]
+[2026-05-27 23:55:12,436: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-27 23:55:12,441: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-27 23:55:12,443: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-27 23:55:12,443: INFO: common: created directory at: artifacts]
+[2026-05-27 23:55:12,443: INFO: common: created directory at: artifacts/model_training]
+[2026-05-27 23:55:12,443: INFO: common: created directory at: artifacts/model_training/models]
+[2026-05-27 23:55:12,444: INFO: common: created directory at: artifacts/model_training/scalers]
+[2026-05-27 23:55:12,454: INFO: Model_training: Training AAPL]
+[2026-05-27 23:55:23,754: INFO: Model_training: AAPL trained]
+[2026-05-27 23:55:23,755: INFO: Model_training: Training GOOGL]
+[2026-05-27 23:55:34,599: INFO: Model_training: GOOGL trained]
+[2026-05-27 23:55:34,599: INFO: Model_training: Training MSFT]
+[2026-05-27 23:55:45,583: INFO: Model_training: MSFT trained]
+[2026-05-27 23:55:45,583: INFO: Model_training: Training NVDA]
+[2026-05-27 23:55:56,666: INFO: Model_training: NVDA trained]
+[2026-05-27 23:55:56,666: INFO: Model_training: Training TSLA]
+[2026-05-27 23:56:07,590: INFO: Model_training: TSLA trained]
+[2026-05-27 23:56:07,592: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-27 23:56:07,594: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-27 23:56:07,595: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-27 23:56:07,595: INFO: common: created directory at: artifacts]
+[2026-05-27 23:56:07,595: INFO: common: created directory at: artifacts/predictions]
+[2026-05-27 23:56:10,066: INFO: Prediction: Forecast saved]
+[2026-05-28 14:29:56,856: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-28 14:29:56,858: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:29:56,860: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:29:56,861: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:29:56,862: INFO: common: created directory at: artifacts]
+[2026-05-28 14:29:56,862: ERROR: DataLoadingPipeline: "'ConfigBox' object has no attribute 'data_loading'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'Data_Loading'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'Data_Loading'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'Data_Loading'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'Data_Loading'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'data_loading'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_loading'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'data_loading'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 24, in main
+    config.get_data_loading_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/config/configuration.py", line 46, in get_data_loading_config
+    config = self.config.Data_Loading
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_loading'"
+[2026-05-28 14:30:31,433: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-28 14:30:31,435: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:30:31,436: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:30:31,437: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:30:31,437: INFO: common: created directory at: artifacts]
+[2026-05-28 14:30:31,437: ERROR: DataLoadingPipeline: "'ConfigBox' object has no attribute 'data_loading'"]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'Data_Loading'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'Data_Loading'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'Data_Loading'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'Data_Loading'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+KeyError: 'data_loading'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_loading'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+AttributeError: 'ConfigBox' object has no attribute 'data_loading'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 24, in main
+    config.get_data_loading_config()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/config/configuration.py", line 46, in get_data_loading_config
+    config = self.config.Data_Loading
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_loading'"
+[2026-05-28 14:31:38,526: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-28 14:31:38,528: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:31:38,530: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:31:38,531: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:31:38,531: INFO: common: created directory at: artifacts]
+[2026-05-28 14:31:38,531: INFO: data_loading: Reading transformed CSV]
+[2026-05-28 14:31:38,539: INFO: data_loading: Rows in CSV: 4110]
+[2026-05-28 14:31:38,540: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-28 14:31:38,540: ERROR: data_loading: invalid literal for int() with base 10: 'None']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 75, in load_to_rds
+    engine = create_engine(
+  File "<string>", line 2, in create_engine
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 564, in create_engine
+    u = _url.make_url(url)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/url.py", line 856, in make_url
+    return _parse_url(name_or_url)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/url.py", line 917, in _parse_url
+    components["port"] = int(components["port"])
+ValueError: invalid literal for int() with base 10: 'None'
+[2026-05-28 14:31:38,542: ERROR: DataLoadingPipeline: invalid literal for int() with base 10: 'None']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 153, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 75, in load_to_rds
+    engine = create_engine(
+  File "<string>", line 2, in create_engine
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 564, in create_engine
+    u = _url.make_url(url)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/url.py", line 856, in make_url
+    return _parse_url(name_or_url)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/url.py", line 917, in _parse_url
+    components["port"] = int(components["port"])
+ValueError: invalid literal for int() with base 10: 'None'
+[2026-05-28 14:32:45,976: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:32:45,979: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:32:45,980: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:32:45,980: INFO: common: created directory at: artifacts]
+[2026-05-28 14:32:45,980: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-28 14:32:48,646: INFO: data_extraction: Data saved at: artifacts/data_ingestion/stock_data.csv]
+[2026-05-28 14:32:48,647: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:32:48,649: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:32:48,650: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:32:48,650: INFO: common: created directory at: artifacts]
+[2026-05-28 14:32:48,650: INFO: common: created directory at: artifacts/transformation]
+[2026-05-28 14:32:48,650: INFO: data_transformation: Reading raw stock data]
+[2026-05-28 14:32:48,655: INFO: data_transformation: Raw dataframe shape: (4260, 7)]
+[2026-05-28 14:32:48,655: INFO: data_transformation: Converting Date column]
+[2026-05-28 14:32:48,658: INFO: data_transformation: Sorting values]
+[2026-05-28 14:32:48,659: INFO: data_transformation: Calculating daily returns]
+[2026-05-28 14:32:48,661: INFO: data_transformation: Calculating moving averages]
+[2026-05-28 14:32:48,664: INFO: data_transformation: Calculating volatility]
+[2026-05-28 14:32:48,665: INFO: data_transformation: Calculating RSI]
+[2026-05-28 14:32:48,668: INFO: data_transformation: Final cleaning]
+[2026-05-28 14:32:48,668: INFO: data_transformation: Saving transformed data]
+[2026-05-28 14:32:48,695: INFO: data_transformation: Processed data saved at: artifacts/transformation/processed_stock_data.csv]
+[2026-05-28 14:32:48,695: INFO: data_transformation: Final dataframe shape: (4115, 12)]
+[2026-05-28 14:32:48,696: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:32:48,697: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:32:48,698: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:32:48,698: INFO: common: created directory at: artifacts]
+[2026-05-28 14:32:48,698: INFO: data_loading: Reading transformed CSV]
+[2026-05-28 14:32:48,702: INFO: data_loading: Rows in CSV: 4115]
+[2026-05-28 14:32:48,702: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-28 14:32:48,702: ERROR: data_loading: invalid literal for int() with base 10: 'None']
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 75, in load_to_rds
+    engine = create_engine(
+  File "<string>", line 2, in create_engine
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 564, in create_engine
+    u = _url.make_url(url)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/url.py", line 856, in make_url
+    return _parse_url(name_or_url)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/url.py", line 917, in _parse_url
+    components["port"] = int(components["port"])
+ValueError: invalid literal for int() with base 10: 'None'
+[2026-05-28 14:34:33,144: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:34:33,147: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:34:33,148: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:34:33,148: INFO: common: created directory at: artifacts]
+[2026-05-28 14:34:33,148: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-28 14:34:36,057: INFO: data_extraction: Data saved at: artifacts/data_ingestion/stock_data.csv]
+[2026-05-28 14:34:36,059: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:34:36,061: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:34:36,062: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:34:36,062: INFO: common: created directory at: artifacts]
+[2026-05-28 14:34:36,063: INFO: common: created directory at: artifacts/transformation]
+[2026-05-28 14:34:36,063: INFO: data_transformation: Reading raw stock data]
+[2026-05-28 14:34:36,070: INFO: data_transformation: Raw dataframe shape: (4260, 7)]
+[2026-05-28 14:34:36,070: INFO: data_transformation: Converting Date column]
+[2026-05-28 14:34:36,078: INFO: data_transformation: Sorting values]
+[2026-05-28 14:34:36,080: INFO: data_transformation: Calculating daily returns]
+[2026-05-28 14:34:36,084: INFO: data_transformation: Calculating moving averages]
+[2026-05-28 14:34:36,087: INFO: data_transformation: Calculating volatility]
+[2026-05-28 14:34:36,088: INFO: data_transformation: Calculating RSI]
+[2026-05-28 14:34:36,091: INFO: data_transformation: Final cleaning]
+[2026-05-28 14:34:36,091: INFO: data_transformation: Saving transformed data]
+[2026-05-28 14:34:36,120: INFO: data_transformation: Processed data saved at: artifacts/transformation/processed_stock_data.csv]
+[2026-05-28 14:34:36,120: INFO: data_transformation: Final dataframe shape: (4115, 12)]
+[2026-05-28 14:34:36,121: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:34:36,123: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:34:36,124: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:34:36,124: INFO: common: created directory at: artifacts]
+[2026-05-28 14:34:36,125: INFO: data_loading: Reading transformed CSV]
+[2026-05-28 14:34:36,148: INFO: data_loading: Rows in CSV: 4115]
+[2026-05-28 14:34:36,148: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-28 14:34:37,383: ERROR: data_loading: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 83, in load_to_rds
+    existing_df = pd.read_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 706, in read_sql
+    with pandasSQL_builder(con) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-28 14:35:13,761: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:35:13,763: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:35:13,764: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:35:13,764: INFO: common: created directory at: artifacts]
+[2026-05-28 14:35:13,764: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-28 14:35:16,041: INFO: data_extraction: Data saved at: artifacts/data_ingestion/stock_data.csv]
+[2026-05-28 14:35:16,042: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:35:16,044: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:35:16,045: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:35:16,045: INFO: common: created directory at: artifacts]
+[2026-05-28 14:35:16,045: INFO: common: created directory at: artifacts/transformation]
+[2026-05-28 14:35:16,045: INFO: data_transformation: Reading raw stock data]
+[2026-05-28 14:35:16,049: INFO: data_transformation: Raw dataframe shape: (4260, 7)]
+[2026-05-28 14:35:16,049: INFO: data_transformation: Converting Date column]
+[2026-05-28 14:35:16,051: INFO: data_transformation: Sorting values]
+[2026-05-28 14:35:16,053: INFO: data_transformation: Calculating daily returns]
+[2026-05-28 14:35:16,054: INFO: data_transformation: Calculating moving averages]
+[2026-05-28 14:35:16,057: INFO: data_transformation: Calculating volatility]
+[2026-05-28 14:35:16,058: INFO: data_transformation: Calculating RSI]
+[2026-05-28 14:35:16,061: INFO: data_transformation: Final cleaning]
+[2026-05-28 14:35:16,061: INFO: data_transformation: Saving transformed data]
+[2026-05-28 14:35:16,087: INFO: data_transformation: Processed data saved at: artifacts/transformation/processed_stock_data.csv]
+[2026-05-28 14:35:16,087: INFO: data_transformation: Final dataframe shape: (4115, 12)]
+[2026-05-28 14:35:16,088: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:35:16,090: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:35:16,090: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:35:16,090: INFO: common: created directory at: artifacts]
+[2026-05-28 14:35:16,091: INFO: data_loading: Reading transformed CSV]
+[2026-05-28 14:35:16,095: INFO: data_loading: Rows in CSV: 4115]
+[2026-05-28 14:35:16,095: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-28 14:35:18,460: ERROR: data_loading: time data "2023-02-14" doesn't match format "%Y-%m-%d %H:%M:%S", at position 5. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 98, in load_to_rds
+    existing_df["Date"] = pd.to_datetime(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 1072, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 435, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 469, in _array_strptime_with_fallback
+    result, tz_out = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 501, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 451, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 583, in pandas._libs.tslibs.strptime._parse_with_format
+ValueError: time data "2023-02-14" doesn't match format "%Y-%m-%d %H:%M:%S", at position 5. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+[2026-05-28 14:40:08,873: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-28 14:40:08,875: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:40:08,876: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:40:08,877: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:40:08,877: INFO: common: created directory at: artifacts]
+[2026-05-28 14:40:08,877: INFO: data_loading: Reading transformed CSV]
+[2026-05-28 14:40:08,886: INFO: data_loading: Rows in CSV: 4115]
+[2026-05-28 14:40:08,886: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-28 14:41:24,021: ERROR: data_loading: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 82, in load_to_rds
+    existing_df = pd.read_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 706, in read_sql
+    with pandasSQL_builder(con) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-28 14:41:24,036: ERROR: DataLoadingPipeline: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 152, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 82, in load_to_rds
+    existing_df = pd.read_sql(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 706, in read_sql
+    with pandasSQL_builder(con) as pandas_sql:
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 908, in pandasSQL_builder
+    return SQLDatabase(con, schema, need_transaction)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/io/sql.py", line 1648, in __init__
+    con = self.exit_stack.enter_context(con.connect())
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3293, in connect
+    return self._connection_cls(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3317, in raw_connection
+    return self.pool.connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 178, in _do_get
+    self._dec_overflow()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 674, in __init__
+    self.__connect()
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "database-1.c5wq2iw6459n.eu-north-1.rds.amazonaws.com" (16.171.95.253), port 5432 failed: Operation timed out
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-05-28 14:43:31,313: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-28 14:43:31,314: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:43:31,316: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:43:31,317: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:43:31,317: INFO: common: created directory at: artifacts]
+[2026-05-28 14:43:31,317: INFO: data_loading: Reading transformed CSV]
+[2026-05-28 14:43:31,326: INFO: data_loading: Rows in CSV: 4115]
+[2026-05-28 14:43:31,326: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-28 14:43:32,678: ERROR: data_loading: time data "2023-02-14" doesn't match format "%Y-%m-%d %H:%M:%S", at position 5. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 97, in load_to_rds
+    existing_df["Date"] = pd.to_datetime(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 1072, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 435, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 469, in _array_strptime_with_fallback
+    result, tz_out = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 501, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 451, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 583, in pandas._libs.tslibs.strptime._parse_with_format
+ValueError: time data "2023-02-14" doesn't match format "%Y-%m-%d %H:%M:%S", at position 5. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+[2026-05-28 14:43:32,679: ERROR: DataLoadingPipeline: time data "2023-02-14" doesn't match format "%Y-%m-%d %H:%M:%S", at position 5. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.]
+Traceback (most recent call last):
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 48, in <module>
+    obj.main()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/pipeline/DataLoadingPipeline.py", line 31, in main
+    loader.load_to_rds()
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 152, in load_to_rds
+    raise e
+  File "/Users/arpitagrawal/Desktop/Resume Projects/MarketETL/src/MarketETL/components/data_loading.py", line 97, in load_to_rds
+    existing_df["Date"] = pd.to_datetime(
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 1072, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 435, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/Users/arpitagrawal/miniconda3/envs/MarketETL/lib/python3.9/site-packages/pandas/core/tools/datetimes.py", line 469, in _array_strptime_with_fallback
+    result, tz_out = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+  File "pandas/_libs/tslibs/strptime.pyx", line 501, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 451, in pandas._libs.tslibs.strptime.array_strptime
+  File "pandas/_libs/tslibs/strptime.pyx", line 583, in pandas._libs.tslibs.strptime._parse_with_format
+ValueError: time data "2023-02-14" doesn't match format "%Y-%m-%d %H:%M:%S", at position 5. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+[2026-05-28 14:45:01,148: INFO: DataLoadingPipeline: Data Loading Stage started]
+[2026-05-28 14:45:01,150: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 14:45:01,151: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 14:45:01,152: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 14:45:01,152: INFO: common: created directory at: artifacts]
+[2026-05-28 14:45:01,152: INFO: data_loading: Reading transformed CSV]
+[2026-05-28 14:45:01,163: INFO: data_loading: Rows in CSV: 4115]
+[2026-05-28 14:45:01,163: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-28 14:45:02,518: INFO: data_loading: New rows to insert: 5]
+[2026-05-28 14:45:02,718: INFO: data_loading: Only new rows inserted]
+[2026-05-28 14:45:02,719: INFO: DataLoadingPipeline: Data Loading Stage completed]
+[2026-05-28 17:03:37,182: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 17:03:37,200: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 17:03:37,204: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 17:03:37,204: INFO: common: created directory at: artifacts]
+[2026-05-28 17:03:37,204: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-28 17:03:40,471: INFO: data_extraction: Data saved at: artifacts/data_ingestion/stock_data.csv]
+[2026-05-28 17:03:40,474: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 17:03:40,477: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 17:03:40,478: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 17:03:40,478: INFO: common: created directory at: artifacts]
+[2026-05-28 17:03:40,478: INFO: common: created directory at: artifacts/transformation]
+[2026-05-28 17:03:40,479: INFO: data_transformation: Reading raw stock data]
+[2026-05-28 17:03:40,487: INFO: data_transformation: Raw dataframe shape: (5112, 7)]
+[2026-05-28 17:03:40,487: INFO: data_transformation: Converting Date column]
+[2026-05-28 17:03:40,494: INFO: data_transformation: Sorting values]
+[2026-05-28 17:03:40,496: INFO: data_transformation: Calculating daily returns]
+[2026-05-28 17:03:40,500: INFO: data_transformation: Calculating moving averages]
+[2026-05-28 17:03:40,504: INFO: data_transformation: Calculating volatility]
+[2026-05-28 17:03:40,506: INFO: data_transformation: Calculating RSI]
+[2026-05-28 17:03:40,510: INFO: data_transformation: Final cleaning]
+[2026-05-28 17:03:40,511: INFO: data_transformation: Saving transformed data]
+[2026-05-28 17:03:40,564: INFO: data_transformation: Processed data saved at: artifacts/transformation/processed_stock_data.csv]
+[2026-05-28 17:03:40,566: INFO: data_transformation: Final dataframe shape: (4938, 12)]
+[2026-05-28 17:03:40,567: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 17:03:40,569: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 17:03:40,571: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 17:03:40,571: INFO: common: created directory at: artifacts]
+[2026-05-28 17:03:40,571: INFO: data_loading: Reading transformed CSV]
+[2026-05-28 17:03:40,579: INFO: data_loading: Rows in CSV: 4938]
+[2026-05-28 17:03:40,581: INFO: data_loading: Connecting to AWS RDS]
+[2026-05-28 17:03:41,956: INFO: data_loading: New rows to insert: 823]
+[2026-05-28 17:03:43,427: INFO: data_loading: Only new rows inserted]
+[2026-05-28 17:03:43,431: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 17:03:43,435: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 17:03:43,437: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 17:03:43,437: INFO: common: created directory at: artifacts]
+[2026-05-28 17:03:43,437: INFO: common: created directory at: artifacts/model_training]
+[2026-05-28 17:03:43,437: INFO: common: created directory at: artifacts/model_training/models]
+[2026-05-28 17:03:43,437: INFO: common: created directory at: artifacts/model_training/scalers]
+[2026-05-28 17:03:43,450: INFO: Model_training: Training AAPL]
+[2026-05-28 17:04:02,361: INFO: Model_training: AAPL trained]
+[2026-05-28 17:04:02,362: INFO: Model_training: Training GOOGL]
+[2026-05-28 17:04:20,878: INFO: Model_training: GOOGL trained]
+[2026-05-28 17:04:20,879: INFO: Model_training: Training MSFT]
+[2026-05-28 17:04:41,186: INFO: Model_training: MSFT trained]
+[2026-05-28 17:04:41,187: INFO: Model_training: Training NVDA]
+[2026-05-28 17:05:01,660: INFO: Model_training: NVDA trained]
+[2026-05-28 17:05:01,661: INFO: Model_training: Training SH]
+[2026-05-28 17:05:20,121: INFO: Model_training: SH trained]
+[2026-05-28 17:05:20,122: INFO: Model_training: Training TSLA]
+[2026-05-28 17:05:41,910: INFO: Model_training: TSLA trained]
+[2026-05-28 17:05:41,915: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-05-28 17:05:41,918: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-28 17:05:41,919: INFO: common: yaml file: config/schema.yaml loaded successfully]
+[2026-05-28 17:05:41,919: INFO: common: created directory at: artifacts]
+[2026-05-28 17:05:41,919: INFO: common: created directory at: artifacts/predictions]
+[2026-05-28 17:05:46,665: INFO: Prediction: Forecast saved]

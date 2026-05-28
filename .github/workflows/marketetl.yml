@@ -1,0 +1,53 @@
+name: MarketETL Daily Run
+
+on:
+
+  schedule:
+    - cron: "0 17 * * *"
+
+  workflow_dispatch:
+
+jobs:
+
+  run-pipeline:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+
+        uses: actions/checkout@v4
+
+      - name: Python
+
+        uses: actions/setup-python@v5
+
+        with:
+          python-version: "3.9"
+
+      - name: Install
+
+        run: |
+
+          pip install -r requirements.txt
+
+      - name: Run ETL
+
+        env:
+
+          DB_HOST: ${{ secrets.DB_HOST }}
+
+          DB_USER: ${{ secrets.DB_USER }}
+
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+
+          DB_PORT: ${{ secrets.DB_PORT }}
+          
+          SSL_ROOT_CERT: ${{ secrets.SSL_ROOT_CERT }}
+
+          DB_NAME: ${{ secrets.DB_NAME }}
+
+        run: |
+
+          python main.py
